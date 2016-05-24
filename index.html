@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/jquery-2.2.4.min.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/easeljs-0.8.2.min.js"></script>
+	<script src="js/engine.js"></script>
+	<title>Electric Field | Fisika Dasar 2</title>
+	<style>
+		canvas{
+			border-style: solid;
+			width : 900px;
+			height: 500px;
+		}
+
+		#inputError{
+			display: none;
+			color: #FF0000;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 class="text-center">Electric Field</h1>
+		<div class="row">
+			<div class="col-md-2">
+				<h4 id="inputError">
+					<strong>Input Error!</strong>
+				</h4>
+				<label>First Atom:</label>
+				<form role="form">
+					<label class="radio-inline"><input type="radio" name="firstAtom" value="+" checked>Positive</label>
+					<label class="radio-inline"><input type="radio" name="firstAtom" value="-">Negative</label>
+				</form>
+				<div class="form-group">
+					<label>Charge:</label>
+					<input type="text" class="form-control" id="firstAtomCharge" value="10">
+				</div>
+				<label>Second Atom:</label>
+				<form role="form">
+					<label class="radio-inline"><input type="radio" name="secondAtom" value="+" checked>Positive</label>
+					<label class="radio-inline"><input type="radio" name="secondAtom" value="-">Negative</label>
+				</form>
+				<div class="form-group">
+					<label>Charge:</label>
+					<input type="text" class="form-control" id="secondAtomCharge" value="10">
+				</div>
+				<label>Force:</label>
+				<p id="force"></p>
+			</div>
+			<div class="col-md-9">
+				<canvas id="ElectricField" width="1800" height="1000">
+					Load Gagal :(
+				</canvas>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
