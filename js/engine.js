@@ -64,6 +64,7 @@ function calculate(){
 	dx = pointOfReference.x - firstAtom.dragger.x;
 	dy = pointOfReference.y - firstAtom.dragger.y;
 	firstElectricField = COULOMB_CONSTANT * q1 / dist(dx, dy);
+	$('#electricField1').text(firstElectricField + " N/C");
 	firstVector = {
 		x : dx * firstElectricField / dist(dx, dy),
 		y : dy * firstElectricField / dist(dx, dy)
@@ -74,10 +75,10 @@ function calculate(){
 					   .moveTo(pointOfReference.x, pointOfReference.y)
 					   .lineTo(pointOfReference.x + firstVector.x, pointOfReference.y + firstVector.y);
 	
-	
 	dx = pointOfReference.x - secondAtom.dragger.x;
 	dy = pointOfReference.y - secondAtom.dragger.y;
 	secondElectricField = COULOMB_CONSTANT * q2 / dist(dx, dy);
+	$('#electricField2').text(secondElectricField + " N/C");
 	secondVector = {
 		x : dx * secondElectricField / dist(dx, dy),
 		y : dy * secondElectricField / dist(dx, dy)
@@ -131,9 +132,6 @@ $(document).ready(function (){
 		stage.update();
 	});
 	firstArrow = new createjs.Shape();
-	//firstArrow.graphics.setStrokeStyle(3).beginStroke("#00ff00").drawCircle(500, 500, 100);
-	//firstArrow.graphics.beginStroke("red").beginFill("blue").drawRect(20, 20, 100, 50);
-	//firstArrow.graphics.beginFill("black").drawCircle(500, 500, 100);
 	secondArrow = new createjs.Shape();
 	resultantArrow = new createjs.Shape();
 	stage.addChild(firstArrow, secondArrow, resultantArrow);

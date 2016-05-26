@@ -31,7 +31,7 @@
 				<h4 id="inputError">
 					<strong>Input Error!</strong>
 				</h4>
-				<label>First Atom:</label>
+				<label>First Charge:</label>
 				<form role="form">
 					<label class="radio-inline"><input type="radio" name="firstAtom" value="+" checked>Positive</label>
 					<label class="radio-inline"><input type="radio" name="firstAtom" value="-">Negative</label>
@@ -40,7 +40,7 @@
 					<label>Charge:</label>
 					<input type="text" class="form-control" id="firstAtomCharge" value="10">
 				</div>
-				<label>Second Atom:</label>
+				<label>Second Charge:</label>
 				<form role="form">
 					<label class="radio-inline"><input type="radio" name="secondAtom" value="+" checked>Positive</label>
 					<label class="radio-inline"><input type="radio" name="secondAtom" value="-">Negative</label>
@@ -51,6 +51,10 @@
 				</div>
 				<label>Force:</label>
 				<p id="force"></p>
+				<label>Electric Field Charge 1:</label>
+				<p id="electricField1"></p>
+				<label>Electric Field Charge 2:</label>
+				<p id="electricField2"></p>
 			</div>
 			<div class="col-md-9">
 				<canvas id="ElectricField" width="1800" height="1000">
